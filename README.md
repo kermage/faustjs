@@ -8,26 +8,16 @@
 </p>
 
 <p align="center">
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/@faustjs/core">
-    <img alt="" src="https://img.shields.io/npm/v/@faustjs/core?color=7e5cef&style=for-the-badge">
-  </a>
-
-  <a aria-label="License" href="https://github.com/wpengine/faustjs/blob/canary/LICENSE">
-    <img alt="" src="https://img.shields.io/npm/l/@faustjs/core?color=7e5cef&style=for-the-badge">
-  </a>
-</p>
-
-<p align="center">
-  <a aria-label="Faust.js Core Downloads" href="https://www.npmjs.com/package/@faustjs/core">
-    <img alt="" src="https://img.shields.io/npm/dw/@faustjs/core?color=7e5cef&style=for-the-badge&label=@faustjs/core">
+  <a aria-label="@faustwp/core Downloads" href="https://www.npmjs.com/package/@faustwp/core">
+    <img alt="" src="https://img.shields.io/npm/dw/@faustwp/core?color=7e5cef&style=for-the-badge&label=@faustwp/core">
   </a>
 <!--  -->
-  <a aria-label="Faust.js  Downloads" href="https://www.npmjs.com/package/@faustjs/react">
-    <img alt="" src="https://img.shields.io/npm/dw/@faustjs/react?color=7e5cef&style=for-the-badge&label=@faustjs/react">
+  <a aria-label="@faustwp/cli Downloads" href="https://www.npmjs.com/package/@faustwp/cli">
+    <img alt="" src="https://img.shields.io/npm/dw/@faustwp/cli?color=7e5cef&style=for-the-badge&label=@faustwp/cli">
   </a>
-
-  <a aria-label="Faust.js  Downloads" href="https://www.npmjs.com/package/@faustjs/next">
-    <img alt="" src="https://img.shields.io/npm/dw/@faustjs/next?color=7e5cef&style=for-the-badge&label=@faustjs/next">
+<!--  -->
+  <a aria-label="License" href="https://github.com/wpengine/faustjs/blob/canary/LICENSE">
+    <img alt="" src="https://img.shields.io/npm/l/@faustjs/core?color=7e5cef&style=for-the-badge">
   </a>
 </p>
 
@@ -39,13 +29,13 @@ Faust.js is a framework for building front-end applications for headless WordPre
 
 Faust.js aims to be framework agnostic, so it can be used with any front-end framework. Visit one of the guides below for a starting point:
 
-- [Getting started with Next.js](https://faustjs.org/docs/next/getting-started)
+- [Getting started with Next.js](https://faustjs.org/docs/getting-started)
 
 As we work towards our first release, we will be introducing support for other frameworks.
 
 ## Documentation
 
-Visit [https://faustjs.org/docs/next/getting-started](https://faustjs.org/docs/next/getting-started) to view the full documentation.
+Visit [https://faustjs.org/docs/getting-started](https://faustjs.org/docs/getting-started) to view the full documentation.
 
 ## WordPress Plugin (FaustWP)
 
@@ -70,6 +60,12 @@ There are many ways to [contribute](/CONTRIBUTING.md) to this project.
 - Review and discuss the [source code changes](https://github.com/wpengine/faustjs/pulls).
 - [Contribute bug fixes](/CONTRIBUTING.md)
 
-### Pull Request Notice
+### Contributor License Agreement
 
-While pull requests are welcome, please note we are in the process of reviewing licensing on the plugin internally and may not be able to merge your pull request in a timely manner.
+All external contributors to WP Engine products must have a signed Contributor License Agreement (CLA) in place before the contribution may be accepted into any WP Engine codebase.
+
+1. [Submit your name and email](https://wpeng.in/cla/)
+2. 📝 Sign the CLA emailed to you
+3. 📥 Receive copy of signed CLA
+
+❤️ Thank you for helping us fulfill our legal obligations in order to continue empowering builders through headless WordPress.

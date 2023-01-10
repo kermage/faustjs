@@ -1,5 +1,10 @@
 name: Test Packages
-on: pull_request
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+
 jobs:
   test_packages:
     strategy:
@@ -14,11 +19,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.version }}
-      - run: rm package-lock.json
+          node-version: '16'
 
       - name: Install
-        run: npm install
+        run: npm ci
 
       - run: npm run build
 
@@ -27,12 +31,12 @@ jobs:
         with:
           working-directory: packages/core
 
-      - name: Code Coverage for React Package
-        uses: ./.github/actions/run-coverage
-        with:
-          working-directory: packages/react
-
       - name: Code Coverage for Next Package
         uses: ./.github/actions/run-coverage
         with:
           working-directory: packages/next
+
+      - name: Code Coverage for FaustWP Core Package
+        uses: ./.github/actions/run-coverage
+        with:
+          working-directory: packages/faustwp-core

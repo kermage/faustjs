@@ -23,12 +23,11 @@ class PostPreviewCest
 
         $I->loginAsAdmin();
         $I->amEditingPostWithId($post_id);
-        $I->click('div.components-guide .components-modal__header button.components-button');
         $I->click('button.block-editor-post-preview__button-toggle');
         $I->wait(4); // Wait for previewlinks.js to modify button href.
         $I->seeLink(
             'Preview in new tab',
-            "${front_end_url}/${post_name}/?preview=true&p=${post_id}&typeName=Post",
+            "${front_end_url}/${post_name}/?preview=true&previewPathname=" . rawurlencode("/post-preview-post/") . "&p=${post_id}&typeName=Post",
         );
 
 		$I->click('Preview in new tab');

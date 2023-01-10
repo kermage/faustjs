@@ -11,6 +11,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+add_action( 'admin_notices', __NAMESPACE__ . '\\frontend_url_notice' );
+/**
+ * Callback for WordPress 'admin_notices' action.
+ *
+ * Show frontend_url missing error if it doesn't exist.
+ *
+ * @return void
+ */
+function frontend_url_notice() {
+	$screen = get_current_screen();
+
+	// Exit if not this plugin's settings page.
+	if ( 'settings_page_faustwp-settings' !== $screen->id ) {
+		return;
+	}
+
+	$frontend_url_setting = faustwp_get_setting( 'frontend_uri' );
+
+	if ( empty( $frontend_url_setting ) ) {
+		?>
+			<div class="notice notice-error is-dismissible" style="background-color: #FFEAE9;">
+				<p><?php esc_html_e( 'Front-end site URL is required to utilize url rewrites and previews.', 'faustwp' ); ?></p>
+				<p><?php esc_html_e( 'It is highly recommended that you update it below to avoid unexpected behavior.', 'faustwp' ); ?></p>
+				<p>
+					<?php
+					printf(
+						/* translators: Link text */
+						esc_html__( 'See the %1$s Getting Started Documentation%2$s for more details.', 'faustwp' ),
+						'<a href="https://faustjs.org/docs/getting-started" target="_blank" rel="noopener noreferrer">',
+						'</a>'
+					);
+					?>
+				</p>
+			</div>
+		<?php
+	}
+}
+
 add_action( 'admin_menu', __NAMESPACE__ . '\\register_settings_menu' );
 /**
  * Callback for WordPress 'admin_menu' action.
@@ -25,8 +63,8 @@ add_action( 'admin_menu', __NAMESPACE__ . '\\register_settings_menu' );
 function register_settings_menu() {
 	add_submenu_page(
 		'options-general.php',
-		__( 'Headless', 'faustwp' ),
-		__( 'Headless', 'faustwp' ),
+		__( 'Faust', 'faustwp' ),
+		__( 'Faust', 'faustwp' ),
 		'manage_options',
 		'faustwp-settings',
 		__NAMESPACE__ . '\\display_settings_page'
@@ -127,16 +165,16 @@ function register_settings_fields() {
 
 add_filter( 'sanitize_option_faustwp_settings', __NAMESPACE__ . '\\sanitize_faustwp_settings', 10, 2 );
 /**
- * Validates and sanitizes FaustWP settings.
+ * Validates and sanitizes Faust settings.
  *
  * The plugin settings page will display any relevant errors when
- * rejecting invalid settings values. Updates to FaustWP settings that
+ * rejecting invalid settings values. Updates to Faust settings that
  * are not initiated from the plugin settings page will not return or
  * display errors, but will still reject invalid values.
  *
  * Once settings are validated, the sanitized values are returned.
  *
- * @param array  $settings FaustWP settings array to validate and sanitize.
+ * @param array  $settings Faust settings array to validate and sanitize.
  * @param string $option   WP option name where settings are saved.
  * @return array Sanitized settings.
  */

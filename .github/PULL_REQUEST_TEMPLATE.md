@@ -1,3 +1,7 @@
+## Tasks
+
+- [ ] I have signed a [Contributor License Agreement (CLA)](https://github.com/wpengine/faustjs#contributor-license-agreement) with WP Engine.
+
 ## Description
 
 <!--

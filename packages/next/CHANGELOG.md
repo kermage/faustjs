@@ -1,5 +1,26 @@
 # @faustjs/next
 
+## 0.15.9
+
+### Patch Changes
+
+- e71a5ce: Fixes the `Type '{}' is missing the following properties from type...` bug some users may experience when building a Faust.js app. #1013
+
+## 0.15.8
+
+### Patch Changes
+
+- de94e46: Added the ability to create a sitemap.xml file for base xml sitemaps and custom pages.
+
+## 0.15.7
+
+### Patch Changes
+
+- 6ab4e1d: Added support for older versions of iOS
+- Updated dependencies [6ab4e1d]
+  - @faustjs/core@0.15.7
+  - @faustjs/react@0.15.7
+
 ## 0.15.6
 
 ### Patch Changes

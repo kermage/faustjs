@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name: FaustWP
+ * Plugin Name: Faust
  * Plugin URI: https://faustjs.org/
- * Description: Plugin for working with Faust.js, the Headless WordPress Framework.
+ * Description: Plugin for working with Faust, the Headless WordPress Framework.
  * Author: WP Engine
  * Author URI: https://wpengine.com/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: faustwp
  * Domain Path: /languages
- * Version: 0.7.9
+ * Version: 0.8.1
  * Requires PHP: 7.2
  * Requires at least: 5.7
  *
@@ -29,6 +29,7 @@ define( 'FAUSTWP_PATH', plugin_basename( FAUSTWP_FILE ) );
 define( 'FAUSTWP_SLUG', dirname( plugin_basename( FAUSTWP_FILE ) ) );
 
 require FAUSTWP_DIR . '/includes/auth/functions.php';
+require FAUSTWP_DIR . '/includes/telemetry/functions.php';
 require FAUSTWP_DIR . '/includes/replacement/functions.php';
 require FAUSTWP_DIR . '/includes/settings/functions.php';
 require FAUSTWP_DIR . '/includes/graphql/functions.php';

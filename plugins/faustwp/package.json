@@ -1,6 +1,5 @@
 {
-  "name": "faustwp",
-  "version": "0.7.9",
-  "private": true,
-  "dependencies": {}
+  "name": "@faustwp/wordpress-plugin",
+  "version": "0.8.1",
+  "private": true
 }
